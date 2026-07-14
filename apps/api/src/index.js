@@ -1,8 +1,8 @@
-import 'dotenv/config'
+import './loadEnv.js'
 import { connectDB } from './db/index.js'
 import { app } from './app.js'
 
-const port = process.env.PORT
+const port = process.env.PORT || 3000
 
 app.listen(port, async () => {
   try {

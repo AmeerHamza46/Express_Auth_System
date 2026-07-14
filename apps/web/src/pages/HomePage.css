@@ -1,0 +1,90 @@
+.home-shell {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  color: var(--paper);
+}
+
+.home-atmosphere {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 20% 15%, rgba(201, 122, 58, 0.25), transparent 55%),
+    radial-gradient(ellipse 60% 45% at 85% 75%, rgba(46, 107, 94, 0.3), transparent 50%),
+    linear-gradient(160deg, #1a1714 0%, #2a2420 45%, #1e2a28 100%);
+  z-index: 0;
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(1.5rem, 5vw, 3.5rem);
+  max-width: 640px;
+  animation: rise 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.home-content .brand-mark {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.5rem, 6vw, 3.75rem);
+  letter-spacing: -0.04em;
+  margin: 0 0 1rem;
+  line-height: 0.95;
+}
+
+.home-content h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.75rem;
+}
+
+.home-copy {
+  margin: 0 0 1.75rem;
+  color: var(--mist);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.home-copy strong {
+  color: var(--paper);
+  font-weight: 600;
+}
+
+.sign-out {
+  align-self: flex-start;
+  border: 1.5px solid rgba(247, 242, 235, 0.35);
+  background: transparent;
+  color: var(--paper);
+  border-radius: 0.85rem;
+  padding: 0.85rem 1.2rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.sign-out:hover {
+  background: rgba(247, 242, 235, 0.08);
+  border-color: rgba(247, 242, 235, 0.55);
+  transform: translateY(-1px);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

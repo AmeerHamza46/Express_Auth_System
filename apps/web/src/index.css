@@ -1,0 +1,40 @@
+:root {
+  --font-display: 'Bricolage Grotesque', Georgia, serif;
+  --font-body: 'Figtree', Georgia, sans-serif;
+  --ink: #1a1714;
+  --ink-soft: #4a433c;
+  --paper: #f7f2eb;
+  --mist: rgba(247, 242, 235, 0.72);
+  --copper: #c97a3a;
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: 500;
+  background: #1a1714;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}

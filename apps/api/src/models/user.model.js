@@ -39,6 +39,18 @@ const userSchema = new Schema(
       default: false,
     },
 
+    emailOtp: {
+      type: String,
+      select: false,
+      default: null,
+    },
+
+    emailOtpExpiresAt: {
+      type: Date,
+      select: false,
+      default: null,
+    },
+
     isActive: {
       type: Boolean,
       default: true,

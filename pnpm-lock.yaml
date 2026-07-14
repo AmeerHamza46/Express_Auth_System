@@ -10,6 +10,9 @@ importers:
 
   apps/api:
     dependencies:
+      '@getbrevo/brevo':
+        specifier: ^6.0.2
+        version: 6.0.2
       bcrypt:
         specifier: ^6.0.0
         version: 6.0.0
@@ -89,6 +92,10 @@ packages:
 
   '@emnapi/wasi-threads@1.2.2':
     resolution: {integrity: sha512-c95qOXkHdydNKhscBTebqEC1CVAZpyqOfVfBzQ1qgzyl3gfeldUjIggDbIZgDKsHLgnsM+igH7TJ/eAasaVuMA==}
+
+  '@getbrevo/brevo@6.0.2':
+    resolution: {integrity: sha512-yxyacx4wkuWcCbFDdFE3RxklaHSGXEP3d0gZaxPy+9aBquvl4ksr7IQgbRCcF8crx5aRvpStVBLeh5iCbWHJrg==}
+    engines: {node: '>=18.0.0'}
 
   '@mongodb-js/saslprep@1.4.12':
     resolution: {integrity: sha512-QAfAMwNgnYxZ2C6D1HgeP7Gc4i/uvJRim415PCIL9ptRxWMNbWeLBYb2/9R4pGKny/s1FVu2JA2cxCUBUOggrA==}
@@ -1162,6 +1169,8 @@ snapshots:
     dependencies:
       tslib: 2.8.1
     optional: true
+
+  '@getbrevo/brevo@6.0.2': {}
 
   '@mongodb-js/saslprep@1.4.12':
     dependencies:

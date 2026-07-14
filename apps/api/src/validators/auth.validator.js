@@ -57,3 +57,35 @@ export const validateSignin = [
   body('password').notEmpty().withMessage('Password is required'),
   handleValidationErrors,
 ]
+
+export const validateVerifyEmail = [
+  body('email')
+    .trim()
+    .notEmpty()
+    .withMessage('Email is required')
+    .isEmail()
+    .withMessage('Invalid email address')
+    .normalizeEmail()
+    .escape(),
+  body('otp')
+    .trim()
+    .notEmpty()
+    .withMessage('Verification code is required')
+    .isLength({ min: 6, max: 6 })
+    .withMessage('Verification code must be 6 digits')
+    .isNumeric()
+    .withMessage('Verification code must be numeric'),
+  handleValidationErrors,
+]
+
+export const validateResendOtp = [
+  body('email')
+    .trim()
+    .notEmpty()
+    .withMessage('Email is required')
+    .isEmail()
+    .withMessage('Invalid email address')
+    .normalizeEmail()
+    .escape(),
+  handleValidationErrors,
+]

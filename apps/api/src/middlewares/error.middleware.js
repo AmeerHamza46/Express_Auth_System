@@ -26,6 +26,7 @@ export const errorHandler = (err, req, res, next) => {
     success: false,
     statusCode: error.statusCode,
     message: error.message,
+    code: error.code || null,
     errors: error.errors,
     data: null,
   })

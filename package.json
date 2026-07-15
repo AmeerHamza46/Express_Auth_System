@@ -9,12 +9,12 @@
     "dev": "pnpm -r --parallel --filter @first_app/api --filter @first_app/web run dev",
     "dev:api": "pnpm --filter @first_app/api dev",
     "dev:web": "pnpm --filter @first_app/web dev",
-    "build": "pnpm -r --filter @first_app/web run build",
+    "build:web": "pnpm --filter @first_app/web run build",
     "start": "node apps/api/src/index.js",
     "format": "pnpm --filter @first_app/api format"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20.19"
   },
   "packageManager": "pnpm@9.15.0"
 }

@@ -12,3 +12,16 @@ export const loginRateLimiter = rateLimit({
     data: null,
   },
 })
+
+export const otpRateLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 8,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: {
+    success: false,
+    statusCode: 429,
+    message: 'Too many verification attempts, please try again later',
+    data: null,
+  },
+})
